@@ -14,10 +14,10 @@ var members = [
 	"my"
 ];
 
-
 // what happens when the page is ready
 $(document).ready(function() {
 
+	// enable click function for headers
 	$('#heading a').click(function() {
 		resetFaces();
 	});
@@ -36,16 +36,10 @@ var generateMemberList = function() {
 		// create an element that we will fill with content for each face
 		var elem = $('<li><a href="#">'+v+'</a></li>');
 
-		// set all elements to have a unique background image based on the members array
-		// elem.css({
-		// 	"background-image" : "url('images/" + v + ".jpg')",			
-		// });
-
 		// find the <a> element in the elem, and assign a click event
 		elem.find('a').click(function(e){
 			loadProfile(v);
 		});
-
 
 		// append each element to the base element
 		members_elem.append(elem);
@@ -95,22 +89,21 @@ var generateFaces = function() {
 
 
 var loadProfile = function(person) {
+
 	// get the associated data json for each of the elements
 	$.getJSON( "data/" + person + ".json", function(data) {
 		// fill the profile with the appropriate content
 		$('#profile').html( 
 			'<h2>' + data.name + '</h2>' +
+			'<p><a href="profiles/' + data.name + '">profile page</a></p>' +
 			'<p><a href="' + data.pathbrite + '">pathbrite portfolio</a></p>'
 		 );
 	});
 
-	// set all the faces 
-	$("#faces li a").css({
+	// set all the faces to one face
+	$("#faces li").css({
 		"background-image" : "url('images/" + person + ".jpg')",
 		"background-attachment" : "fixed",
-		"background-repeat" : "none"				
+		"background-repeat" : "none"
 	});
 }
-
-
-

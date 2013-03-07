@@ -1,33 +1,28 @@
 /* stylesheet */
 
 html, body {
-	background:#333;
-	color:#fff;
+	background: #eee;
+	color: #000;
 	font-family:sans-serif;
 }
-
 a {
-	color:#d08;
+	color:#d00;
 }
 
-#shuffle {
-	position:absolute;
-	top:620px;
-}
+
 
 #content {
 	position:absolute;
-	left:480px;
+	left:490px;
 }
-
-
 #members, #members li {
 	margin:0;
 	padding:0;
 }
-#members li {
-	list-style-type:none;
-}
+	#members li {
+		list-style-type:none;
+		text-transform: capitalize;
+	}
 
 
 #faces {
@@ -36,67 +31,19 @@ a {
 	padding:0;
 	width:450px;
 	position:absolute;
-	top:0px;
-	left:0;
+	top:20px;
+	left:20px;
+	box-shadow: #888 5px 10px 10px;
 }
-#faces li {
-	float:left;
-	width: 150px;
-	height: 150px;
-	/*background-repeat: no-repeat;*/
-	background-attachment: fixed;	
-	background-position: 0 0;
-}
-#faces li a {
-	display:block;
-	width:100%;
-	height:100%;
-}
-
-#faces .amy {
-	background-image: url("images/amy.jpg");
-}
-
-#faces .andrew {
-	background-image: url("images/andrew.jpg");
-}
-
-#faces .angelisa {
-	background-image: url("images/angelisa.jpg");
-}
-
-#faces .bianca {
-	background-image: url("images/bianca.jpg");
-}
-
-#faces .bradley {
-	background-image: url("images/bradley.jpg");
-}
-
-#faces .dwana {
-	background-image: url("images/dwana.jpg");
-}
-
-#faces .gabe {
-	background-image: url("images/gabe.jpg");
-}
-
-#faces .jon {
-	background-image: url("images/jon.jpg");
-}
-
-#faces .karina {
-	background-image: url("images/karina.jpg");
-}
-
-#faces .kevin {
-	background-image: url("images/kevin.jpg");
-}
-
-#faces .koby {
-	background-image: url("images/koby.jpg");
-}
-
-#faces .my {
-    background-image: url("images/my.jpg");
-}
+	#faces li {
+		float:left;
+		width: 150px;
+		height: 150px;
+		background-attachment: fixed;	
+		background-position: 20px 20px;
+	}
+		#faces li a {
+			display:block;
+			width:100%;
+			height:100%;
+		}
