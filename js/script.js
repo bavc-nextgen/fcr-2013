@@ -70,11 +70,12 @@ var generateFaces = function() {
 	// loop through each of the 'members' array
 	$(members).each(function(i, v) {
 		// create an element that we will fill with content for each face
-		var elem = $('<li><a href="#"></a></li>');
+		var elem = $('<li></li>');
 
 		// set all elements to have a unique background image based on the members array
 		elem.css({
-			"background-image" : "url('images/" + v + ".jpg')",			
+			"background-image" : "url('images/" + v + ".jpg')",
+			"background-attachment" : "40px 60px"	
 		});
 
 		// find the <a> element in the elem, and assign a click event
