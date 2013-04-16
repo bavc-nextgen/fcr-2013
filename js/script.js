@@ -103,22 +103,29 @@ var generateFaces = function() {
 
 var loadProfile = function(person) {
 
-	// get the associated data json for each of the elements
-	$.getJSON( "data/" + person + ".json", function(data) {
-		// fill the profile with the appropriate content
-		$('#profile').html( 
-			'<h2>' + data.name + '</h2>' +
-			'<p><a href="profiles/' + data.name + '">profile page</a></p>' +
-			'<p><a href="' + data.pathbrite + '">pathbrite portfolio</a></p>'
-		 );
+	$("#face").fadeOut(250, function() {
 
+		// get the associated data json for each of the elements
+		$.getJSON( "data/" + person + ".json", function(data) {
+			// fill the profile with the appropriate content
+			$('#profile').html( 
+				'<h2>' + data.name + '</h2>' +
+				'<p><a href="profiles/' + data.name + '">profile</a></p>' +
+				'<p><a href="' + data.pathbrite + '">pathbrite</a></p>' + 
+				'<p><a href="' + data.linkein + '">linkedin</a></p>'
+			 );
+
+			resetFace();
+		});
+		
 		resetFace();
+		
+		$("#face").css({
+			"background-image" : "url('images/" + person + ".jpg')"
+		}).fadeIn(250, function() {
+			generateFaces();
+		});
 	});
-	
-	resetFace();
-	$("#face").css({
-		"background-image" : "url('images/" + person + ".jpg')"
-	}).fadeIn(250);
 }
 
 var resetFace = function() {
