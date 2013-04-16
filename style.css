@@ -4,23 +4,24 @@
 @import url(http://fonts.googleapis.com/css?family=Sintony);
 
 html, body {
-	background: #eee;
-	color: #000;
+	background: #232323;
+	color: #ddd;
 	font-family:'Sintony', sans-serif;
 	margin:0;
 	padding:0;
 }
 a {
-	color:#d00;
+	color:#ff3;
+	text-decoration: none;
+}
+small {
+    font-size:10px; color:#777;
+
 }
 
 #heading {
-	text-align:center;
-	line-height:4em; /* this is the offset of the background images of the faces, too */
-	margin:0;
-	padding:0;
-	position:relative;
-	z-index:1000;
+	text-align: center;
+
 }
 #heading a {
 	text-decoration:none;
@@ -28,45 +29,61 @@ a {
 
 
 
-#members {
-		position:absolute;
-		top:0;
-		left:50%;
-		padding-left:250px;
-		padding-top:7em;
+#sidebar {
+	position:absolute;
+	left:260px;
+    margin-left:50%;
+	top:90px;
 	}
-	#members li {
+	#people {
+		margin:0;
+		padding:0;
+	}
+	#people li {
 		margin:0;
 		padding:0;
 		list-style-type:none;
 		text-transform: capitalize;
 	}
-
+	#info {
+		border-top:1px solid #444;
+    	margin-top:2em;
+    	padding-top:2em;
+    	font-size:12px;		
+	}
 
 
 #faces {
 	list-style-type:none;
-	margin:0 auto;
+	margin: 0 auto;
 	padding:0;
 	width:450px;
 	height:600px;
-	box-shadow: #888 5px 10px 10px;
+	box-shadow: #000 5px 10px 10px;
 }
 	#faces li {
 		float:left;
 		width: 150px;
 		height: 150px;
-		background-attachment:fixed;		
-		background-position: 50% 8em;
 	}
 		#faces li a {
 			display:block;
 			width:100%;
 			height:100%;
 		}
+	#face {
+		width:450px;
+		height:600px;
+		margin: 0 auto;
+		position:absolute;
+	}		
 
 
-#content {
-	margin-top:500px;
+#profile {
+	margin:0 auto;
+    width:450px;
+    text-transform: capitalize;
 }
-
+	#profile h2 {
+		text-transform: capitalize;
+	}

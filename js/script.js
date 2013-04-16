@@ -1,5 +1,5 @@
 // list of all students, teachers
-var members = [
+var people = [
 	"amy", 
 	"andrew", 
 	"angelisa", 
@@ -14,11 +14,15 @@ var members = [
 	"my"
 ];
 
+$(window).resize(function() {
+	resetFace();
+});
+
 // what happens when the page is ready
 $(document).ready(function() {
 
 	// enable click function for headers
-	$('#heading a').click(function() {
+	$('#heading a, #remix_button').click(function() {
 		resetFaces();
 	});
 
@@ -30,11 +34,12 @@ $(document).ready(function() {
 });	
 
 var generateMemberList = function() {
-	var members_elem = $('#members');
-	// loop through each of the 'members' array
-	$(members).each(function(i, v) {
+	var people_elem = $('#people');
+	// loop through each of the 'people' array
+	$(people).each(function(i, v) {
 		// create an element that we will fill with content for each face
-		var elem = $('<li><a href="#">'+v+'</a></li>');
+		var instructor  = (v == "jon" || v == "gabe") || false;
+		var elem = $('<li><a href="#">'+v+'</a> ' + (instructor ? '<small>(instructor)</small>' : '') + '</li>');
 
 		// find the <a> element in the elem, and assign a click event
 		elem.find('a').click(function(e){
@@ -42,13 +47,14 @@ var generateMemberList = function() {
 		});
 
 		// append each element to the base element
-		members_elem.append(elem);
+		people_elem.append(elem);
 	});
 };
 
 var resetFaces = function() {
 	// reset
 	$('#profile').empty();
+	$('#face').fadeOut(250);
 	generateFaces();
 };
 
@@ -62,30 +68,36 @@ var generateFaces = function() {
 	var profile_elem = $('#profile')	
 
 	// shuffle faces
-	members.sort(function() { return 0.5 - Math.random(); });
+	people.sort(function() { return 0.5 - Math.random(); });
 
 	// empty base element
 	base_elem.empty();
 
-	// loop through each of the 'members' array
-	$(members).each(function(i, v) {
-		// create an element that we will fill with content for each face
-		var elem = $('<li></li>');
+	// loop through each of the 'people' array. it's a 3x4 grid
+	var i = 0;
+	for(var yy = 0; yy < 4; yy++) {
+		for (var xx = 0; xx < 3; xx++) {
 
-		// set all elements to have a unique background image based on the members array
-		elem.css({
-			"background-image" : "url('images/" + v + ".jpg')",
-			"background-attachment" : "40px 60px"	
-		});
+			var p = people[i];
+			var elem = $('<li><a></a></li>');
 
-		// find the <a> element in the elem, and assign a click event
-		elem.find('a').click(function(e){
-			loadProfile(v);
-		});
+			elem.css({
+				"background-image" : "url('images/" + p + ".jpg')",
+				"background-position" : "-" + String( xx * 150 ) + "px -" + String( yy * 150 ) +"px"
+			});		
+			
+			var click = (function(p) {
+				return function() {
+					loadProfile(p);
+				}
+			})(p);
+			elem.find('a').click(click);
 
-		// append each element to the base element
-		base_elem.append(elem);
-	});
+			base_elem.append(elem);
+
+			i++;
+		}
+	}
 };
 
 
@@ -99,12 +111,19 @@ var loadProfile = function(person) {
 			'<p><a href="profiles/' + data.name + '">profile page</a></p>' +
 			'<p><a href="' + data.pathbrite + '">pathbrite portfolio</a></p>'
 		 );
-	});
 
-	// set all the faces to one face
-	$("#faces li").css({
-		"background-image" : "url('images/" + person + ".jpg')",
-		"background-attachment" : "fixed",
-		"background-repeat" : "none"
+		resetFace();
+	});
+	
+	resetFace();
+	$("#face").css({
+		"background-image" : "url('images/" + person + ".jpg')"
+	}).fadeIn(250);
+}
+
+var resetFace = function() {
+	$("#face").css({
+		"left" : $('#faces').offset().left,
+		"top" : $('#faces').offset().top
 	});
 }
