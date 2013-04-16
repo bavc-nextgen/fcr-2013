@@ -1,16 +1,16 @@
 // list of all students, teachers
 var people = [
-	"amy", 
-	"andrew", 
-	"angelisa", 
-	"bianca", 
-	"bradley", 
-	"dwana", 
-	"gabe", 
-	"jon", 
-	"karina", 
-	"kevin", 
-	"koby", 
+	"amy",
+	"andrew",
+	"angelisa",
+	"bianca",
+	"bradley",
+	"dwana",
+	"gabe",
+	"jon",
+	"karina",
+	"kevin",
+	"koby",
 	"my"
 ];
 
@@ -22,7 +22,8 @@ $(window).resize(function() {
 $(document).ready(function() {
 
 	// enable click function for headers
-	$('#heading a, #remix_button').click(function() {
+	$('#heading a, #remix_button').click(function(e) {
+		e.preventDefault();
 		resetFaces();
 	});
 
@@ -31,7 +32,7 @@ $(document).ready(function() {
 
 	// generate faces faces
 	generateFaces();
-});	
+});
 
 var generateMemberList = function() {
 	var people_elem = $('#people');
@@ -60,18 +61,38 @@ var resetFaces = function() {
 
 // generate faces function
 var generateFaces = function() {
-	
+
 	// create a variable for the faces element
 	var base_elem = $('#faces');
 
 	// create a variable for the profile element
-	var profile_elem = $('#profile')	
+	var profile_elem = $('#profile')
 
 	// shuffle faces
 	people.sort(function() { return 0.5 - Math.random(); });
 
 	// empty base element
 	base_elem.empty();
+	base_elem.unbind('mousemove');
+	base_elem.mousemove(function(e) {
+		var elem = $(base_elem).find('li');
+		var i = 0;
+		var mx = e.clientX - 450 / 2;
+		var my = e.clientY - 600 / 2;
+		for(var yy = 0; yy < 4; yy++) {
+			for (var xx = 0; xx < 3; xx++) {
+				// console.log(e.currentTarget);
+				// console.log(e.clientX, e.clientY);
+				var ix = ((-xx * base_elem.width()  / 3) + mx);
+				var iy = ((-yy * base_elem.height() / 4) + my);
+				$(elem[i]).css({
+					"background-position" : ix + "px " + iy +"px"
+				});
+				i++;
+			}
+		}
+	});
+
 
 	// loop through each of the 'people' array. it's a 3x4 grid
 	var i = 0;
@@ -83,14 +104,15 @@ var generateFaces = function() {
 
 			elem.css({
 				"background-image" : "url('images/" + p + ".jpg')",
-				"background-position" : "-" + String( xx * 150 ) + "px -" + String( yy * 150 ) +"px"
-			});		
-			
+				"background-position" : "-" + String( xx * base_elem.width() / 3 ) + "px -" + String( yy *  base_elem.height() / 4 ) +"px"
+			});
+
 			var click = (function(p) {
 				return function() {
 					loadProfile(p);
 				}
 			})(p);
+			elem.find('a').unbind('click');
 			elem.find('a').click(click);
 
 			base_elem.append(elem);
@@ -108,18 +130,18 @@ var loadProfile = function(person) {
 		// get the associated data json for each of the elements
 		$.getJSON( "data/" + person + ".json", function(data) {
 			// fill the profile with the appropriate content
-			$('#profile').html( 
+			$('#profile').html(
 				'<h2>' + data.name + '</h2>' +
 				'<p><a href="profiles/' + data.name + '">profile</a></p>' +
-				'<p><a href="' + data.pathbrite + '">pathbrite</a></p>' + 
+				'<p><a href="' + data.pathbrite + '">pathbrite</a></p>' +
 				'<p><a href="' + data.linkein + '">linkedin</a></p>'
 			 );
 
 			resetFace();
 		});
-		
+
 		resetFace();
-		
+
 		$("#face").css({
 			"background-image" : "url('images/" + person + ".jpg')"
 		}).fadeIn(250, function() {
