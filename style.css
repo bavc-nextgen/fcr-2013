@@ -12,18 +12,15 @@ a {
 }
 small {
     font-size:10px; color:#777;
-
 }
 
 #heading {
-	text-align: center;
+	margin-left:30px;
 }
-
 #sidebar {
 	position:absolute;
-	left:260px;
-  margin-left:50%;
 	top:90px;
+	margin-left:30px;
 	line-height:1.3em;
 	}
 	#people {
@@ -38,23 +35,23 @@ small {
 	}
 	#info {
 		border-top:1px solid #444;
-    	margin-top:2em;
-    	padding-top:2em;
-    	font-size:12px;
+    margin-top:2em;
+    padding-top:2em;
+    font-size:12px;
 	}
 
 
 #faces {
 	list-style-type:none;
-	margin: 0 auto;
+	margin-left:180px;
 	padding:0;
-	width:450px;
-	height:600px;
+	width:405px;
+	height:540px;
 }
 	#faces li {
 		float:left;
-		width: 150px;
-		height: 150px;
+		width: 135px;
+		height: 135px;
 	}
 		#faces li a {
 			display:block;
@@ -62,18 +59,18 @@ small {
 			height:100%;
 		}
 	#face {
-		width:450px;
-		height:600px;
+		width: 405px;
+		height: 540px;
 		margin: 0 auto;
 		position:absolute;
 	}
 
 
 #profile {
-	margin:0 auto;
-    width:450px;
-    text-transform: capitalize;
+  position:absolute;
+  top: 60px;
+  left: 620px;
 }
-	#profile h2 {
-		text-transform: capitalize;
-	}
+#profile h2 {
+    text-transform:capitalize;
+}

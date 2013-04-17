@@ -1,4 +1,4 @@
-// list of all students, teachers
+// list of all students, instructors
 var people = [
 	"amy",
 	"andrew",
@@ -14,80 +14,60 @@ var people = [
 	"my"
 ];
 
+
 $(window).resize(function() {
 	resetFace();
 });
 
-// what happens when the page is ready
-$(document).ready(function() {
 
-	// enable click function for headers
+$(document).ready(function() {
 	$('#heading a, #remix_button').click(function(e) {
 		e.preventDefault();
 		resetFaces();
 	});
-
-	// generate member list
 	generateMemberList();
-
-	// generate faces faces
 	generateFaces();
 });
 
+
 var generateMemberList = function() {
 	var people_elem = $('#people');
-	// loop through each of the 'people' array
 	$(people).each(function(i, v) {
-		// create an element that we will fill with content for each face
-		var instructor  = (v == "jon" || v == "gabe") || false;
-		var elem = $('<li><a href="#">'+v+'</a> ' + (instructor ? '<small>(instructor)</small>' : '') + '</li>');
-
-		// find the <a> element in the elem, and assign a click event
+		var elem = $('<li><a href="#">' + v + '</a> ' + ((v == "jon" || v == "gabe") ? '<small>(instructor)</small>' : '') + '</li>');
 		elem.find('a').click(function(e){
 			loadProfile(v);
 		});
-
-		// append each element to the base element
 		people_elem.append(elem);
 	});
 };
 
+
 var resetFaces = function() {
-	// reset
-	$('#profile').empty();
 	$('#face').fadeOut(250);
+	$('#profile').fadeOut(250);
 	generateFaces();
 };
 
-// generate faces function
+
 var generateFaces = function() {
 
-	// create a variable for the faces element
 	var base_elem = $('#faces');
-
-	// create a variable for the profile element
 	var profile_elem = $('#profile')
 
-	// shuffle faces
 	people.sort(function() { return 0.5 - Math.random(); });
 
-	// empty base element
 	base_elem.empty();
 	base_elem.unbind('mousemove');
 	base_elem.mousemove(function(e) {
 		var elem = $(base_elem).find('li');
 		var i = 0;
-		var mx = e.clientX - 450 / 2;
-		var my = e.clientY - 600 / 2;
+		var mx = e.clientX;
+		var my = e.clientY - $('#faces').height() / 2 - 80;
 		for(var yy = 0; yy < 4; yy++) {
 			for (var xx = 0; xx < 3; xx++) {
-				// console.log(e.currentTarget);
-				// console.log(e.clientX, e.clientY);
-				var ix = ((-xx * base_elem.width()  / 3) + mx);
-				var iy = ((-yy * base_elem.height() / 4) + my);
-				$(elem[i]).css({
-					"background-position" : ix + "px " + iy +"px"
-				});
+				var ix = ((-xx * base_elem.width()  / 3) + mx),
+					  iy = ((-yy * base_elem.height() / 4) + my);
+				$(elem[i]).css({ "background-position" : ix + "px " + iy +"px" });
 				i++;
 			}
 		}
@@ -100,7 +80,8 @@ var generateFaces = function() {
 		for (var xx = 0; xx < 3; xx++) {
 
 			var p = people[i];
-			var elem = $('<li><a></a></li>');
+			var elem = $('<li><a href="#"></a></li>');
+			var a = elem.find('a');
 
 			elem.css({
 				"background-image" : "url('images/" + p + ".jpg')",
@@ -112,11 +93,9 @@ var generateFaces = function() {
 					loadProfile(p);
 				}
 			})(p);
-			elem.find('a').unbind('click');
-			elem.find('a').click(click);
-
+			a.unbind('click');
+			a.click(click);
 			base_elem.append(elem);
-
 			i++;
 		}
 	}
@@ -124,35 +103,35 @@ var generateFaces = function() {
 
 
 var loadProfile = function(person) {
-
+	if ($('#profile').is(':parent')) {
+		$('#profile').fadeOut(250, function() {
+			$('#profile').empty();
+		});
+	}
 	$("#face").fadeOut(250, function() {
-
-		// get the associated data json for each of the elements
 		$.getJSON( "data/" + person + ".json", function(data) {
-			// fill the profile with the appropriate content
 			$('#profile').html(
 				'<h2>' + data.name + '</h2>' +
 				'<p><a href="profiles/' + data.name + '">profile</a></p>' +
 				'<p><a href="' + data.pathbrite + '">pathbrite</a></p>' +
-				'<p><a href="' + data.linkein + '">linkedin</a></p>'
+				'<p><a href="' + data.linkedin + '">linkedin</a></p>'
 			 );
-
+			$('#profile').fadeIn();
 			resetFace();
 		});
-
 		resetFace();
-
 		$("#face").css({
 			"background-image" : "url('images/" + person + ".jpg')"
 		}).fadeIn(250, function() {
 			generateFaces();
 		});
 	});
-}
+};
+
 
 var resetFace = function() {
 	$("#face").css({
 		"left" : $('#faces').offset().left,
 		"top" : $('#faces').offset().top
 	});
-}
+};
