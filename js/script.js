@@ -112,7 +112,7 @@ var loadProfile = function(person) {
 		$.getJSON( "data/" + person + ".json", function(data) {
 			$('#profile').html(
 				'<h2>' + data.name + '</h2>' +
-				'<p><a href="profiles/' + data.name + '">profile</a></p>' +
+				'<p><a href="profiles/' + data.name.toLowerCase() + '">profile</a></p>' +
 				'<p><a href="' + data.pathbrite + '">pathbrite</a></p>' +
 				'<p><a href="' + data.linkedin + '">linkedin</a></p>'
 			 );
