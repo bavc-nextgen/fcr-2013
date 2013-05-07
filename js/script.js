@@ -111,7 +111,7 @@ var loadProfile = function(person) {
 	$("#face").fadeOut(250, function() {
 		$.getJSON( "data/" + person + ".json", function(data) {
 
-			var html = (null !== data.instructor) ? 
+			var html = (typeof data.instructor != 'undefined') ? 
 				'<h2>' + data.name + '</h2>' + 
 				'<p><small>(instructor)</small></p>'
 				:
