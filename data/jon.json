@@ -1,5 +1,7 @@
 {
 	"name" : "Jon",
+	"instructor" : "true",
 	"image" : "images/jon.jpg",
-	"pathbrite" : "http://www.rebelliouspixels.com/"
+	"pathbrite" : "",
+	"linkedin" : ""
 }

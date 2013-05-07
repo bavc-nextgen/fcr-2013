@@ -1,5 +1,7 @@
 {
 	"name" : "Gabe",
+	"instructor" : "true",
 	"image" : "images/gabe.jpg",
-	"pathbrite" : "https://pathbrite.com/portfolio/PsSJ1PE0S"
+	"pathbrite" : "",
+	"linkedin" : ""
 }
