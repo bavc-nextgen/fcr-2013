@@ -85,7 +85,7 @@ var generateFaces = function() {
 
 			elem.css({
 				"background-image" : "url('images/" + p + ".jpg')",
-				"background-position" : "-" + String( xx * base_elem.width() / 3 ) + "px -" + String( yy *  base_elem.height() / 4 ) +"px"
+				"background-position" : "-" + String( xx * base_elem.width() / 3 ) + "px -" + String( yy *  base_elem.height() / 4 ) + "px"
 			});
 
 			var click = (function(p) {
@@ -110,12 +110,17 @@ var loadProfile = function(person) {
 	}
 	$("#face").fadeOut(250, function() {
 		$.getJSON( "data/" + person + ".json", function(data) {
-			$('#profile').html(
+
+			var html = (null !== data.instructor) ? 
+				'<h2>' + data.name + '</h2>' + 
+				'<p><small>(instructor)</small></p>'
+				:
 				'<h2>' + data.name + '</h2>' +
 				'<p><a href="profiles/' + data.name.toLowerCase() + '">profile</a></p>' +
 				'<p><a href="' + data.pathbrite + '">pathbrite</a></p>' +
-				'<p><a href="' + data.linkedin + '">linkedin</a></p>'
-			 );
+				'<p><a href="' + data.linkedin + '">linkedin</a></p>';
+
+			$('#profile').html(html);
 			$('#profile').fadeIn();
 			resetFace();
 		});
