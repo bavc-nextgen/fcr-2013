@@ -1,18 +1,20 @@
+
 body {
-	background : #2E2B27;
+	background :#B12796;
 	color : #ffffff;
-	font-family: sans-serif;
+	font-family:  "Comic Sans MS";
 }
+
 .container {
-	background: #575247;
-	max-width:860px;
-	margin: 0 auto;
+	background: #E8828F;
+	max-width:600px;
+	margin: 20;
 	padding: 30px;
 }
 .profile {
 	height:270px;
-	padding:20px;
-	background:#343434;
+	padding:30px;
+	background:#C25285;
 }
 .pic {
 	float:left;
@@ -22,5 +24,6 @@ body {
 .about {
 	margin-top:100px;
 }
-.bio {	
+.bio {
+
 }
