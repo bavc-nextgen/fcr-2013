@@ -21,20 +21,21 @@ $(window).resize(function() {
 
 
 $(document).ready(function() {
+	
 	$('#heading a, #remix_button').click(function(e) {
 		e.preventDefault();
 		resetFaces();
 	});
+
 	generateMemberList();
 	generateFaces();
 
-	// if hash
+	// permalinking the hash
 	if (window.location.hash && $.inArray( people, window.location.hash)) {
 		setTimeout(function() {
 			loadProfile( window.location.hash.replace('#', '') );
 		}, 150);
 	}
-	
 });
 
 
