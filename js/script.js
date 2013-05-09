@@ -27,6 +27,14 @@ $(document).ready(function() {
 	});
 	generateMemberList();
 	generateFaces();
+
+	// if hash
+	if (window.location.hash && $.inArray( people, window.location.hash)) {
+		setTimeout(function() {
+			loadProfile( window.location.hash.replace('#', '') );
+		}, 150);
+	}
+	
 });
 
 
@@ -43,6 +51,7 @@ var generateMemberList = function() {
 
 
 var resetFaces = function() {
+	window.location.hash = "";
 	$('#face').fadeOut(250);
 	$('#profile').fadeOut(250);
 	generateFaces();
@@ -102,7 +111,7 @@ var generateFaces = function() {
 };
 
 
-var loadProfile = function(person) {
+var loadProfile = function( person ) {
 	if ($('#profile').is(':parent')) {
 		$('#profile').fadeOut(250, function() {
 			$('#profile').empty();
@@ -110,15 +119,15 @@ var loadProfile = function(person) {
 	}
 	$("#face").fadeOut(250, function() {
 		$.getJSON( "data/" + person + ".json", function(data) {
-
+			
 			var html = (typeof data.instructor != 'undefined') ? 
 				'<h2>' + data.name + '</h2>' + 
 				'<p><small>(instructor)</small></p>'
 				:
 				'<h2>' + data.name + '</h2>' +
-				'<p><a href="profiles/' + data.name.toLowerCase() + '">profile</a></p>' +
-				'<p><a href="' + data.pathbrite + '">pathbrite</a></p>' +
-				'<p><a href="' + data.linkedin + '">linkedin</a></p>';
+				'<p><a href="profiles/' + data.name.toLowerCase() + '">Projects</a></p>' +
+				'<p><a href="' + data.pathbrite + '">Pathbrite</a></p>' +
+				'<p><a href="' + data.linkedin + '">LinkedIn</a></p>';
 
 			$('#profile').html(html);
 			$('#profile').fadeIn();
@@ -129,6 +138,7 @@ var loadProfile = function(person) {
 			"background-image" : "url('images/" + person + ".jpg')"
 		}).fadeIn(250, function() {
 			generateFaces();
+			window.location.hash = person;
 		});
 	});
 };
@@ -137,6 +147,6 @@ var loadProfile = function(person) {
 var resetFace = function() {
 	$("#face").css({
 		"left" : $('#faces').offset().left,
-		"top" : $('#faces').offset().top
+		"top"  : $('#faces').offset().top
 	});
 };
