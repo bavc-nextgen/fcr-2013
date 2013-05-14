@@ -6,10 +6,10 @@
 	
 	<style>
 	  body{
-	       font-size: 24px;
+	       font-size: 22px;
 	       font-family: monospace;
 	       background-image: url(background.gif);
-	       color: #F0F8FF; 
+	       color: #153E7E; 
 	      }
 	 .container{
 	         background: LightSteelBlue;
@@ -19,38 +19,67 @@
 	         padding: 30px;
 	         box-shadow: 10px 10px 5px black;
 	 }
+     .circleHeading{
+        background: #369CBA;
+        -webkit-border-radius: 999px;
+	    -moz-border-radius: 999px;
+	    border-radius: 999px;
+	    color:#fff;
+	    display:inline-block;
+	    width:200px;
+	    height:200px;
+	    line-height: 90px;
+	    text-align: center;
+	    font-size: 41px;
+	    font-family: : monospace;
+	    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.5);
+	 }
+
 	 .profile{
 	   width: 150px;
+	   margin-top:5px;
+	   margin-right:20px;
 	 }
+
+	 .clear {
+	 	clear:both;
+	 }
+
 	</style>
 	
 	</head>
   <body>
+
+  	<div class="circleHeading">
+       <a href="http://www.linkedin.com/pub/my-phan/51/621/abb"> "My" Page</a> 
+  	</div>
+
     <div class="container">
-    <h1>"My"Page</h1>
-    
-    <img class = "profile" src = "myphan.jpg" />
-    
+    <hr>
+    <h2> About Me: </h2>
+        <img class="profile" src="myphan.jpg" align="left"/>
     <p> 
-    My name is My Phan. I am a student at City College of San Francisco,<br> 
-    and I am going to transfer soon. I am study to a programmer <br> 
+    Hi all! <br>
+    My name is My Phan. I am a student at City College of San Francisco,
+    and I am going to transfer soon.<br>I am study to be a programmer 
     but I want to become an UIUX designer.<br>
     Hopefully, I can have a double major at the new school.<br>
     Currently, I am taking a Video/Remix class at BAVC. Here is the video I make.
     </p>
 
     <a href="cleaning.html">
-    	<img src="cleaning_ss.png" />
+    	<img src="cleaning_ss.png" align="right"/>
     </a>
     <p>
-    	[Description]
+    	For centuries, women have been view as a weaker and  
     </p>
 
     <br>
-    <a href="http://www.linkedin.com/pub/my-phan/51/621/abb"> This is my profile on Linkedin</a> 
     <br>
     <br>
+
+    <div class="clear"></div>
+    <hr>
     </div>
-     
   </body>
 </html>
