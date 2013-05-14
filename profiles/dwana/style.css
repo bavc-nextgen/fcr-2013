@@ -1,0 +1,29 @@
+
+body {
+	background :#B12796;
+	color : #ffffff;
+	font-family:  "Comic Sans MS";
+}
+
+.container {
+	background: #E8828F;
+	max-width:600px;
+	margin: 20;
+	padding: 30px;
+}
+.profile {
+	height:270px;
+	padding:30px;
+	background:#C25285;
+}
+.pic {
+	float:left;
+	width: 200px;
+	margin-right:30px;
+}
+.about {
+	margin-top:100px;
+}
+.bio {
+
+}

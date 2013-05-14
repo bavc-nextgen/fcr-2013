@@ -1,0 +1,39 @@
+
+
+body{
+	font-family: georgia;
+	background-color: #575243;
+	color: white;
+	}
+	
+span{
+	border: 3px solid;
+	color: black;
+}	
+
+.title {
+	color: #B3A479;
+	margin: auto;
+}
+	
+.container {
+	width: 640px;
+	margin: 40px auto;
+	color: white;
+}
+
+.pic {
+	width: 150px;
+}
+
+.desc {
+	width: 650px;
+	color: white;
+}
+
+.about {
+	height: 280px;
+	padding: 10px;
+	background: #B3A479;
+}
+
