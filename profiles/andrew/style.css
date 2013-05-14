@@ -27,11 +27,21 @@
 		}
 
 		.flower {
- 			
-		  	width : 250px ;
+ 			width : 250px ;
 		  	margin-right : 0px ;
 		}
 
+
+		.star {
+ 			width : 175px ;
+		  	margin-right : 0px ;
+		}
+
+		.projects {
+			width : 200px ;
+		  	margin-right : 0px ;
+
+		}
 
 		.bio {
 			
