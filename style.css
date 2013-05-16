@@ -8,6 +8,9 @@ html, body {
 }
 a {
 	color:#ff3;
+}
+a:hover {
+	color:#aa3;
 	text-decoration: none;
 }
 small {
