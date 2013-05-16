@@ -15,9 +15,15 @@
 		}
 		
 		.profile {
-			height : 300px ; 
+			height : 250px ; 
 			padding : 10px ;
 		  	background : #834138 ;
+		}
+
+		.profile1 {
+			height : 225px ; 
+			padding : 10px ;
+		  	
 		}
 		
 		.pic {
@@ -38,12 +44,15 @@
 		}
 
 		.projects {
+			float : left ;
 			width : 200px ;
 		  	margin-right : 0px ;
 
 		}
 
 		.bio {
+			width : 500px ;
+		  	margin-right : 0px ;
 			
 		}
 		
