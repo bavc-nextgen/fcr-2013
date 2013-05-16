@@ -1,30 +1,31 @@
 /* style sheet */
-	
-	body {
-			background : #730625;
-			color	: #C3E8E2;
-			font-family: sans-serif;
-		}
-		h1, h2, h3, h4, h5, h6 {
-			color: white;
-		}
-	
-		.container {
-			width:700px;
-			background:#1B695C;
-			margin: 50px auto;
-			padding:20px;
-		}
-	
-		.profile {
-			background:#067361;
-			height: 270px;
-			padding:20px;
-		}
-		.pic {
-			width: 200px;
-			float:left;
-			margin-right:30px;		
-		}
-		.bio {
-		}
+
+body {
+	background : #730625;
+	color	: #C3E8E2;
+	font-family: sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: white;
+}
+.container {
+	width:700px;
+	background:#1B695C;
+	margin: 50px auto;
+	padding:20px;
+}
+.profile {
+	background:#067361;
+	height: 270px;
+	padding:20px;
+}
+.pic {
+	width: 450px;
+	float:left;
+	margin-right:30px;		
+}
+.bio {
+}
+.artmurmur{
+	width: 650px;
+}
