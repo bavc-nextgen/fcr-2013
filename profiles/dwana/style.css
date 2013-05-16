@@ -1,14 +1,15 @@
-
 body {
-	background :#B12796;
+	/*background :#B12796;*/
+	background-image: url('background.jpg'); 
 	color : #ffffff;
 	font-family:  "Comic Sans MS";
+
 }
 
 .container {
 	background: #E8828F;
-	max-width:600px;
-	margin: 20;
+	max-width:900px;
+	margin: 20px auto 20px auto;
 	padding: 30px;
 }
 .profile {
