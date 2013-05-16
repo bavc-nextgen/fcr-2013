@@ -116,17 +116,26 @@ var loadProfile = function( person ) {
 	}
 	$("#face").fadeOut(250, function() {
 		$.getJSON( "data/" + person + ".json", function(data) {
-			
-			var html = (typeof data.instructor != 'undefined') ? 
-				'<h2>' + data.name + '</h2>' + 
-				'<p><small>(instructor)</small></p>'
-				:
-				'<h2>' + data.name + '</h2>' +
-				'<p><a href="profiles/' + data.name.toLowerCase() + '">More Projects...</a></p>' +
-				'<p><small>' + 
-				'<a href="' + data.pathbrite + '">Pathbrite</a> | ' +
-				'<a href="' + data.linkedin + '">LinkedIn</a>' + 
-				'</small></p>';
+			var html = "";
+			if ((typeof data.instructor != 'undefined')) {
+				html =
+					'<h2>' + data.name + '</h2>' + 
+					'<p><small>(instructor)</small></p>';
+			} else {
+				html += 
+					'<h2>' + data.name + '</h2>';
+				if (data.projects) {
+					// html += "<P>has projects</p>"
+				}
+				html += 
+					'<p><a href="profiles/' + data.name.toLowerCase() + '">More Projects...</a></p>' +
+					'<p><small>' + 
+					'<a href="' + data.pathbrite + '">Pathbrite</a> | ' +
+					'<a href="' + data.linkedin + '">LinkedIn</a>' + 
+					'</small></p>';
+			}
+
+
 			$('#profile').html(html);
 			$('#profile').fadeIn();
 			resetFace();
