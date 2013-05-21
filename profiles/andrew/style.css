@@ -33,8 +33,9 @@
 		}
 
 		.flower {
+
  			width : 250px ;
-		  	margin-right : 0px ;
+		  	margin-left : 175px ;
 		}
 
 
@@ -46,7 +47,7 @@
 		.projects {
 			float : left ;
 			width : 200px ;
-		  	margin-right : 0px ;
+		  	margin-right : 20px ;
 
 		}
 
@@ -56,12 +57,6 @@
 			
 		}
 		
-		.nav{
 
-
-		}
-
-		.horizontalLine {
-     	border-top: thin solid white;
-     	}
+	
 	
