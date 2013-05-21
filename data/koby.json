@@ -2,5 +2,6 @@
 	"name" : "Koby",
 	"image" : "images/koby.jpg",
 	"pathbrite" : "https://pathbrite.com/portfolio/PwSJOPBXS/resume",
-	"linkedin" : "http://www.linkedin.com/pub/koby-kayden/61/62b/b63/"
+	"linkedin" : "http://www.linkedin.com/pub/koby-kayden/61/62b/b63/",
+	"featured" : ["drive-thumb.png", "profiles/koby/drive/"]
 }
