@@ -125,7 +125,11 @@ var loadProfile = function( person ) {
 				html += 
 					'<h2>' + data.name + '</h2>';
 				if (data.projects) {
-					// html += "<P>has projects</p>"
+					html += "<p>Featured Project</p>"
+					html += '<a href="'+data.featured[1]+'">'
+					html += '<img src="profiles/' + data.name.toLowerCase() + '/' + data.featured[0] + '" />';
+					html += '</a>'
+					html += "<br/>"	
 				}
 				html += 
 					'<p><a href="profiles/' + data.name.toLowerCase() + '">More Projects...</a></p>' +
