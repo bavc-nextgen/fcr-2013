@@ -1,6 +1,7 @@
 {
-	"name" : "My Phan",
+	"name" : "My",
 	"image" : "images/my.jpg",
 	"pathbrite" : "https://pathbrite.com/portfolio/PMdJaPiWS/new-experiences",
-	"linkedin" : "http://www.linkedin.com/in/myphan/"
+	"linkedin" : "http://www.linkedin.com/in/myphan/",
+	"featured" : [ "cleaning_ss-thumb.png", "http://www.youtube.com/watch?v=LQtKPV1bcs0" ]
 }
