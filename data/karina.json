@@ -3,8 +3,9 @@
 	"image" : "images/karina.jpg",
 	"pathbrite" : "https://pathbrite.com/kibarra1990",
 	"linkedin" : "www.linkedin.com/pub/karina-ibarra/48/a17/511/",
+	"featured" : ["depression_thumb_sm.png", "http://www.youtube.com/watch?v=B3rD1pmckIQ", "featured"],
 	"projects" : [
-		["depression_thumb_sm.png", "http://www.youtube.com/watch?v=B3rD1pmckIQ"],
+		["depression_thumb_sm.png", "http://www.youtube.com/watch?v=B3rD1pmckIQ", "featured"],
 		["pitbulls_thumb_sm.png", "pitbulls.html"]
 	]
 }
