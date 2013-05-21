@@ -2,5 +2,6 @@
 	"name" : "Andrew",
 	"image" : "images/andrew.jpg",
 	"pathbrite" : "https://pathbrite.com/portfolio/PISJCPi0S",
-	"linkedin" : "http://www.linkedin.com/profile/view?id=180209133&trk=tab_pro"
+	"linkedin" : "http://www.linkedin.com/profile/view?id=180209133&trk=tab_pro",
+	"featured" : [ "health-thumb.png", "http://www.youtube.com/watch?v=LMYBFEXWJwg" ]
 }
