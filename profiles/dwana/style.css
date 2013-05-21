@@ -1,13 +1,13 @@
 body {
 	/*background :#B12796;*/
-	background-image: url('background.jpg'); 
+	background-image: url('newbackground.jpg'); 
 	color : #ffffff;
-	font-family:  "Comic Sans MS";
+ font-family: 'Fascinate';
 
 }
 
 .container {
-	background: #E8828F;
+	background: #A32900;
 	max-width:900px;
 	margin: 20px auto 20px auto;
 	padding: 30px;
@@ -15,7 +15,7 @@ body {
 .profile {
 	height:270px;
 	padding:30px;
-	background:#C25285;
+	background:#E68A00;
 }
 .pic {
 	float:left;
@@ -23,7 +23,7 @@ body {
 	margin-right:30px;
 }
 .about {
-	margin-top:100px;
+	margin-top:90px;
 }
 .bio {
 
