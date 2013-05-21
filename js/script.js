@@ -83,21 +83,17 @@ var generateFaces = function() {
 		}
 	});
 
-
 	// loop through each of the 'people' array. it's a 3x4 grid
 	var i = 0;
 	for(var yy = 0; yy < 4; yy++) {
 		for (var xx = 0; xx < 3; xx++) {
-
-			var p = people[i];
-			var elem = $('<li><a href="#"></a></li>');
-			var a = elem.find('a');
-
+			var p = people[i],
+				elem = $('<li><a href="#"></a></li>'),
+				a = elem.find('a');
 			elem.css({
 				"background-image" : "url('images/" + p + ".jpg')",
 				"background-position" : "-" + String( xx * base_elem.width() / 3 ) + "px -" + String( yy *  base_elem.height() / 4 ) + "px"
 			});
-
 			var click = (function(p) {
 				return function() {
 					loadProfile(p);
@@ -120,15 +116,29 @@ var loadProfile = function( person ) {
 	}
 	$("#face").fadeOut(250, function() {
 		$.getJSON( "data/" + person + ".json", function(data) {
-			
-			var html = (typeof data.instructor != 'undefined') ? 
-				'<h2>' + data.name + '</h2>' + 
-				'<p><small>(instructor)</small></p>'
-				:
-				'<h2>' + data.name + '</h2>' +
-				'<p><a href="profiles/' + data.name.toLowerCase() + '">Projects</a></p>' +
-				'<p><a href="' + data.pathbrite + '">Pathbrite</a></p>' +
-				'<p><a href="' + data.linkedin + '">LinkedIn</a></p>';
+			var html = "";
+			if ((typeof data.instructor != 'undefined')) {
+				html =
+					'<h2>' + data.name + '</h2>' + 
+					'<p><small>(instructor)</small></p>';
+			} else {
+				html += 
+					'<h2>' + data.name + '</h2>';
+				if (data.featured) {
+					html += "<p>Featured Project</p>"
+					html += '<a href="'+data.featured[1]+'">'
+					html += '<img src="profiles/' + data.name.toLowerCase() + '/' + data.featured[0] + '" />';
+					html += '</a>'
+					html += "<br/>"	
+				}
+				html += 
+					'<p><a href="profiles/' + data.name.toLowerCase() + '">More Projects...</a></p>' +
+					'<p><small>' + 
+					'<a href="' + data.pathbrite + '">Pathbrite</a> | ' +
+					'<a href="' + data.linkedin + '">LinkedIn</a>' + 
+					'</small></p>';
+			}
+
 
 			$('#profile').html(html);
 			$('#profile').fadeIn();

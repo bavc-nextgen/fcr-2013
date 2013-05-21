@@ -1,49 +1,51 @@
 
 body{
-	background : black;
-	color : #47D9BF;
+	background : #354245;
+	color : black;
 	font-family: sans-serif;
 }
 p{
 	text-align: left;
-	background: #04518C;
 }
 h1,{
 	text-align: center;
-	color: #F2D03B;
 }
 
 h2, h3{
 	text-align: left;
-	color: #F2D03B;
 }
 .container{
-	background: #003056;
+	background: grey;
 	max-width: 860px;
 	padding: 30px;
 	margin: 0 auto;
+	
 }
 .project{
-	background: #04518C;
-	color: #47D9BF;
-	margin: 0 auto;
+	background: #174457;
+	margin: 20px auto;
 	padding: 10px;
+}
+.project img {
+	margin: 0 auto;
 }
 .profile{
 	height: 400px;
 	padding: 30px;
-	background: #04518C;
+	background: #174457;
 	margin: 0 auto;
 	text-align: center;
 }
 .about{
-
+	background-color: #174457;
+	padding: 20px;
 }
 .pic{
 	float: left;
 	width: 200px;
 	margin-right: 30px;
+	padding: 10px;
 }
 .bio{
-
+	margin: 0px;
 }
