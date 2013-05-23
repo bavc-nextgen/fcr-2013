@@ -2,5 +2,10 @@
 	"name" : "Bradley",
 	"image" : "images/bradley.jpg",
 	"pathbrite" : "https://pathbrite.com/jermainecameron",
-	"linkedin" : "http://www.linkedin.com/profile/view?id=118575408&trk=tab_pro"
+	"linkedin" : "http://www.linkedin.com/profile/view?id=118575408&trk=tab_pro",
+	"projects" : [
+		[ "cartoons-thumb.png", "http://www.youtube.com/watch?v=lR6AsLahpP4", "TESTESTORONEtoons Remix" ],
+		[ "stds-ss.png", "profiles/bradley/precious.html", "Life is Precious (Popcorn Remix)" ],
+		[ "profile-ss.png", "profiles/bradley/", "Profile Page"]
+	]
 }

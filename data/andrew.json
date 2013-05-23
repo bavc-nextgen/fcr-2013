@@ -2,5 +2,10 @@
 	"name" : "Andrew",
 	"image" : "images/andrew.jpg",
 	"pathbrite" : "https://pathbrite.com/portfolio/PISJCPi0S",
-	"linkedin" : "http://www.linkedin.com/profile/view?id=180209133&trk=tab_pro"
+	"linkedin" : "http://www.linkedin.com/profile/view?id=180209133&trk=tab_pro",
+	"projects" : [
+		[ "health-thumb.png", "http://www.youtube.com/watch?v=LMYBFEXWJwg", "My Health"  ],
+		[ "bcc.png", "profiles/andrew/bcc.html", "Black Girls Code (Popcorn Remix)"  ],
+		[ "profile-ss.png", "profiles/andrew/", "Profile" ]
+	]
 }

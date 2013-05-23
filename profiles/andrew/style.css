@@ -2,34 +2,61 @@
 
 
 		body{
-			background :#ffffff ;
-			color : #ffffff ;	
-			font-family : sans-serif ;
+			background : #BFBBB0;
+			color : #FFFFFF ;	
+			font-family : sans-serif : font-size:px;
 			
 		}
 		.container {
-			background : #000000 ;
-			max-width : 800px ;
+			background :#4F6573;
+			width : 625px ;
 			margin : 0 auto ;
 			padding : 30px ;
 		}
 		
 		.profile {
-			height : 400px ; 
+			height : 230px ; 
 			padding : 10px ;
-		  	background : #59051D ;
+		  	background : #834138 ;
+		}
+
+		.profile1 {
+			height : 225px ; 
+			padding : 10px ;
+		  	
 		}
 		
 		.pic {
 		  	float : left ;
-		  	width : 200px ;
+		  	width : 145px ;
 		  	margin-right : 30px ;
 		}
+
+		.flower {
+
+ 			width : 250px ;
+		  	margin-left : 175px ;
+		}
+
+
+		.star {
+ 			width : 175px ;
+		  	margin-right : 0px ;
+		}
+
+		.projects {
+			float : left ;
+			width : 200px ;
+		  	margin-right : 20px ;
+
+		}
+
 		.bio {
+			width : 600px ;
+		  	margin-right : 0px ;
 			
 		}
 		
-		.horizontalLine {
-     	border-top: thin solid white;
-     	}
+
+	
 	

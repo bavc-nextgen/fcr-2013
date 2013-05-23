@@ -3,9 +3,9 @@
 	"image" : "images/karina.jpg",
 	"pathbrite" : "https://pathbrite.com/kibarra1990",
 	"linkedin" : "www.linkedin.com/pub/karina-ibarra/48/a17/511/",
-	"featured" : ["depression_thumb_sm.png", "http://www.youtube.com/watch?v=B3rD1pmckIQ", "featured"],
 	"projects" : [
-		["depression_thumb_sm.png", "http://www.youtube.com/watch?v=B3rD1pmckIQ", "featured"],
-		["pitbulls_thumb_sm.png", "pitbulls.html"]
+		["depression_thumb_sm.png", "http://www.youtube.com/watch?v=B3rD1pmckIQ", "Side Effects of Anti-Depression Medication"],
+		["pitbulls_thumb_sm.png", "profiles/karina/pitbulls.html", "Pitbulls (Popcorn Remix)"],
+		["profile-ss.png", "profiles/karina/", "Profile Page"]
 	]
 }
