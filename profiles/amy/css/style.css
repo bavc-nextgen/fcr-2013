@@ -2,37 +2,84 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,900);
 
-h1 {
-	margin: 0;
-	clear: both;
-	margin-left: 10px;
-	padding-top: 10px;
+#container {
+	width: 100%;
+	margin-top: 0px;
+	max-width: 1200px;
+}
+
+body {
+	background-color: lightgrey;
 	
 }
 
-#section-1 p {
-	text-align: center;
-	position: relative;
-	font-size: 50px;
-	font-family: 'Open Sans', sans-serif;
-	padding: 50px;
-	width: 802px;
-	height: 507px;
-	color: aqua;
-	background-color: gray;
-	margin-top: 0px;
+h1 {
+	margin: 0;
+	clear: both;
 }
 
-img.profile {
+p span {
+	text-shadow: 1px 1px 1px black;
+	color: tomato;
+}
+
+.profile {
 	float: left;
 	width: 200px;
 	height: auto;
+	margin-top: 50px;
+	margin-right: 20px;
+}
+
+.section {
+	padding: 35px;
+}
+
+#section-1 {
+	color: aqua;
+	background-color: grey;
+}
+
+#section-1 p {
+	text-align: left;
+	position: relative;
+	font-size: 50px;
+	font-family: 'Open Sans', sans-serif;
+	/*width: 802px;*/
+	margin-top: 35px;
+}
+
+#section-2 {
+	background-color: white;
 }
 
 
-#section-3 iframe {
-	margin-left: 10px;
+#section-3 {
+	background-color: black;
+	color: white;
 }
+
+#section-3 img{
+	width: 800;
+	height: auto;
+}
+
+#section-3 a{
+	text-decoration: none;
+}
+
+#section-3 a:link {
+	color:#FF0000;
+}
+
+#section-3 a:visited {
+	color:#00FF00;
+}
+
+#section-3 a:hover {
+	color:#FF00FF;
+}
+
 .logo {
 	margin: 25px 10px;
 	text-align: center;
@@ -42,6 +89,7 @@ img.profile {
 	font-family: 'Raleway', sans-serif; 
 	font-weight: 900;
 }
+
 
 nav {
 	background-color: turquoise;
@@ -78,28 +126,15 @@ nav a:hover {
 
 nav .current a {
 	background: slategray;
-	color: whitesmoke;
+	color: tomato;
 	font-weight: bolder;
 }
 
 #content {
 	margin-left: 300px;
-	width: 1100px;
-}
-
-.section {
-	height: 650px;
-	width: 903px;
-	border: 1px solid lightgrey;
-	padding-top: 20px;
-}
-
-#container {
 	width: 100%;
-	max-width: 1200px;
-	margin-top: 0px;
+	max-width: 900px;
+	
 }
 
-#section-2 {
-	height: 722px;
-}
+
