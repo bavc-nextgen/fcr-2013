@@ -5,7 +5,7 @@
 	"linkedin" : "http://www.linkedin.com/in/myphan/",
 	"projects" : [
 		["cleaning_ss-thumb.png", "http://www.youtube.com/watch?v=LQtKPV1bcs0", "Cleaning Women"],
-		["choices.png", "profiles/my/choices.html", "Choices (Popcon Remix)"],
+		["choices.PNG", "profiles/my/choices.html", "Choices (Popcon Remix)"],
 		["profile-ss.png", "profiles/my/", "Profile Page"]
 	]		
 }
