@@ -3,5 +3,9 @@
 	"image" : "images/bradley.jpg",
 	"pathbrite" : "https://pathbrite.com/jermainecameron",
 	"linkedin" : "http://www.linkedin.com/profile/view?id=118575408&trk=tab_pro",
-	"featured" : [ "cartoons-thumb.png", "http://www.youtube.com/watch?v=lR6AsLahpP4" ]
+	"projects" : [
+		[ "cartoons-thumb.png", "http://www.youtube.com/watch?v=lR6AsLahpP4", "Innapropriate Cartoons" ],
+		[ "stds-ss.png", "profiles/bradley/", "Popcorn Remix" ],
+		[ "profile-ss.png", "profiles/bradley/", "Profile Page"]
+	]
 }

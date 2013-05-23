@@ -2,6 +2,11 @@
 	"name" : "Kevin",
 	"image" : "images/kevin.jpg",
 	"pathbrite" : "https://pathbrite.com/portfolio/PVyJFPdVS/april-1-1996",
-	"linkedin" : "http://linkedin.com/in/kevingil"
+	"linkedin" : "http://linkedin.com/in/kevingil",
+	"projects" : [
+		["android-thumb.png", "http://www.youtube.com/watch?v=B3rD1pmckIQ", "Android vs Iphone"],
+		["brave-new-world.png", "pitbulls.html", "Brave New World (Created with Popcorn.js)"],
+		["profile-ss.png", "profiles/kevin/", "Profile Page"]
+	]
 }
 

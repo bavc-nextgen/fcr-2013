@@ -16,6 +16,9 @@ a:hover {
 small {
     font-size:10px; color:#777;
 }
+h4 {
+    margin-bottom:0.25em;   
+}
 
 #heading {
 	margin-left:30px;
@@ -73,6 +76,9 @@ small {
   position:absolute;
   top: 60px;
   left: 620px;
+}
+#profile img {
+	max-width:300px;
 }
 #profile h2 {
     text-transform:capitalize;
