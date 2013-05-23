@@ -1,0 +1,30 @@
+body {
+	/*background :#B12796;*/
+	background-image: url('newbackground.jpg'); 
+	color : #ffffff;
+ font-family: 'Fascinate';
+
+}
+
+.container {
+	background: #A32900;
+	max-width:900px;
+	margin: 20px auto 20px auto;
+	padding: 30px;
+}
+.profile {
+	height:270px;
+	padding:30px;
+	background:#E68A00;
+}
+.pic {
+	float:left;
+	width: 200px;
+	margin-right:30px;
+}
+.about {
+	margin-top:90px;
+}
+.bio {
+
+}

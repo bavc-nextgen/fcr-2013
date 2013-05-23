@@ -2,5 +2,6 @@
 	"name" : "Bradley",
 	"image" : "images/bradley.jpg",
 	"pathbrite" : "https://pathbrite.com/jermainecameron",
-	"linkedin" : "http://www.linkedin.com/profile/view?id=118575408&trk=tab_pro"
+	"linkedin" : "http://www.linkedin.com/profile/view?id=118575408&trk=tab_pro",
+	"featured" : [ "cartoons-thumb.png", "http://www.youtube.com/watch?v=lR6AsLahpP4" ]
 }

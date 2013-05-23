@@ -1,6 +1,7 @@
 {
-	"name" : "Amy",
+	"name" : "amy",
 	"image" : "images/amy.jpg",
 	"pathbrite" : "https://pathbrite.com/portfolio/PTSJuPy0S",
-	"linkedin" : "http://www.linkedin.com/in/amyresume"
+	"linkedin" : "http://www.linkedin.com/in/amyresume",
+	"featured" : ["checkmate-thumb.png", "profiles/amy/checkmate.html"]
 }

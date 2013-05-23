@@ -1,8 +1,9 @@
 body {
-	background : #2E2B27;
+	background : #33334C;
 	color : #ffffff;
 	font-family: sans-serif;
 }
+
 .container {
 	background: #575247;
 	max-width:860px;
@@ -12,7 +13,7 @@ body {
 .profile {
 	height:270px;
 	padding:20px;
-	background:#343434;
+	background:#395656;
 }
 .pic {
 	float:left;
@@ -22,5 +23,6 @@ body {
 .about {
 	margin-top:100px;
 }
-.bio {	
+.bio {
+
 }
