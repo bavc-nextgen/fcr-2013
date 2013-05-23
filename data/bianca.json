@@ -2,5 +2,10 @@
 	"name" : "bianca",
 	"image" : "images/bianca.jpg",
 	"pathbrite" : "https://www.Pathbrite.com/bianca23",
-	"linkedin" : "https://www.linkedin.com/profile/view?id=247195594"
+	"linkedin" : "https://www.linkedin.com/profile/view?id=247195594",
+	"projects" : [
+		[ "bc.png", "http://www.youtube.com/watch?v=rgeEe7i1ZE0", "Pharmaceutical Birth Control Side Effects" ],
+		[ "artmurmur.png", "profiles/bianca/artmurmur.html", "Oakland Art Murmer (Popcorn Remix)" ],
+		[ "profile-ss.png", "profiles/bianca", "Profile Page"  ]
+	]	
 }

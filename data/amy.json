@@ -1,6 +1,11 @@
 {
-	"name" : "Amy",
+	"name" : "amy",
 	"image" : "images/amy.jpg",
 	"pathbrite" : "https://pathbrite.com/portfolio/PTSJuPy0S",
-	"linkedin" : "http://www.linkedin.com/in/amyresume"
+	"linkedin" : "http://www.linkedin.com/in/amyresume",
+	"projects" : [
+		["checkmate-thumb.png", "profiles/amy/checkmate.html", "Checkmate (Popcorn Remix)"],
+		["drugs-ss.png", "http://www.youtube.com/embed/MB-0QYc0Sh8", "Drugs PSA Remix"],
+		["profile-ss.png", "profiles/amy/", "Profile Page"]
+	]
 }

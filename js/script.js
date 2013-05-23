@@ -116,6 +116,7 @@ var loadProfile = function( person ) {
 	}
 	$("#face").fadeOut(250, function() {
 		$.getJSON( "data/" + person + ".json", function(data) {
+			console.log(data);
 			var html = "";
 			if ((typeof data.instructor != 'undefined')) {
 				html =
@@ -124,21 +125,22 @@ var loadProfile = function( person ) {
 			} else {
 				html += 
 					'<h2>' + data.name + '</h2>';
-				if (data.featured) {
-					html += "<p>Featured Project</p>"
-					html += '<a href="'+data.featured[1]+'">'
-					html += '<img src="profiles/' + data.name.toLowerCase() + '/' + data.featured[0] + '" />';
-					html += '</a>'
-					html += "<br/>"	
+					html += 
+						'<p>' + 
+						'<a href="' + data.pathbrite + '">Pathbrite</a> | ' +
+						'<a href="' + data.linkedin + '">LinkedIn</a>' + 
+						'</p>';					
+				if (data.projects) {
+					for(var i = 0; i < data.projects.length; i++ ) {
+						html += '<p>';
+						html += '<h4>' + data.projects[i][2] + '</h4>';
+						html += '<a href="'+data.projects[i][1]+'">'
+						html += '<img src="profiles/' + data.name.toLowerCase() + '/' + data.projects[i][0] + '" />';
+						html += '</a>';
+						html += '</p>';
+					}
 				}
-				html += 
-					'<p><a href="profiles/' + data.name.toLowerCase() + '">More Projects...</a></p>' +
-					'<p><small>' + 
-					'<a href="' + data.pathbrite + '">Pathbrite</a> | ' +
-					'<a href="' + data.linkedin + '">LinkedIn</a>' + 
-					'</small></p>';
 			}
-
 
 			$('#profile').html(html);
 			$('#profile').fadeIn();

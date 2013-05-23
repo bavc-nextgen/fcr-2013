@@ -2,5 +2,10 @@
 	"name" : "dwana",
 	"image" : "images/dwana.jpeg",
 	"pathbrite" : "https://pathbrite.com/portfolio/P0SJfPsWS",
-	"linkedin" : "http://www.linkedin.com/pub/d-wana-stewart/56/49/719?trk=shareTw"
+	"linkedin" : "http://www.linkedin.com/pub/d-wana-stewart/56/49/719?trk=shareTw",
+	"projects" : [	
+		[ "colors-thumb.png", "profiles/dwana/colors.html", "COLORS (Popcorn Remix)" ],
+		["iphone.png", "http://www.youtube.com/watch?feature=player_embedded&v=fGWH58Q7Sxs", "The Great and Powerful 'i'"],
+		["profile-ss.png", "profiles/dwana/", "Profile Page"]
+	]
 }
