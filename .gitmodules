@@ -1,3 +1,6 @@
 [submodule "profiles/koby/drive"]
 	path = profiles/koby/drive
 	url = git@github.com:kobyk/drive.git
+[submodule "profiles/kevin/dpcr"]
+	path = profiles/kevin/dpcr
+	url = git://github.com/kevingil/dpcr.git

@@ -4,8 +4,8 @@
 	"pathbrite" : "https://pathbrite.com/portfolio/PVyJFPdVS/april-1-1996",
 	"linkedin" : "http://linkedin.com/in/kevingil",
 	"projects" : [
-		["android-thumb.png", "http://www.youtube.com/watch?v=B3rD1pmckIQ", "Android vs Iphone"],
-		["brave-new-world.png", "pitbulls.html", "Brave New World (Created with Popcorn.js)"],
+		["numbers_thumb.png", "http://www.youtube.com/watch?v=kHfHNVZJKg0", "Steve Jobs Numbers Remix"],
+		["ncv_thumb.png", "profiles/kevin/dpcr/coldwar/", "New Clear Vision (Created with Popcorn.js)"],
 		["profile-ss.png", "profiles/kevin/", "Profile Page"]
 	]
 }
